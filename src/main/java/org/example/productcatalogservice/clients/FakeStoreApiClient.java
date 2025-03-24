@@ -50,10 +50,10 @@ public class FakeStoreApiClient {
     public FakeStoreProductDto createProduct(Product product) {
         RestTemplate restTemplate = restTemplateBuilder.build();
         FakeStoreProductDto input = productConverter.getFakeStoreProductDto(product);
-        return restTemplate.postForEntity("https://fakestoreapi.com/products}", input,
+        return restTemplate.postForEntity("https://fakestoreapi.com/products", input,
                 FakeStoreProductDto.class).getBody();
 //        FakeStoreProductDto input = productConverter.getFakeStoreProductDto(product);
-//        return requestForEntity("https://fakestoreapi.com/products}", HttpMethod.POST, input,
+//        return requestForEntity("https://fakestoreapi.com/products", HttpMethod.POST, input,
 //                FakeStoreProductDto.class).getBody();
     }
 
